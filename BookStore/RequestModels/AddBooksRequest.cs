@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace BLL.DTO
+namespace API.RequestModels
 {
-    public class BooksDTO
+    public class AddBooksRequest
     {
-        public int Id { get; set; }
         public string Name { get; set; }
         public string Author { get; set; }
         public string TypeOfCover { get; set; }

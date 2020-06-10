@@ -13,16 +13,16 @@ namespace BLL.MapperConfig
         {
             CreateMap<BooksDTO, Books>()
                 .ForMember(a => a.Name, src => src.MapFrom(a => a.Name))
-                .ForMember(a => a.Level, src => src.MapFrom(a => a.ToxicityLevel))
+                .ForMember(a => a.Theme, src => src.MapFrom(a => a.Theme))
                 .ReverseMap()
                 .ForPath(a => a.Name, opt => opt.MapFrom(src => src.Name))
-                .ForPath(a => a.ToxicityLevel, opt => opt.MapFrom(src => src.Level));
+                .ForPath(a => a.Theme, opt => opt.MapFrom(src => src.Theme));
 
             CreateMap<LockerDTO, Locker>()
-                .ForMember(a => a.Level, src => src.MapFrom(a => a.ToxicityLevel))
+                .ForMember(a => a.Theme, src => src.MapFrom(a => a.Theme))
                 .ForMember(a => a.Capacity, src => src.MapFrom(a => a.Capacity))
                 .ReverseMap()
-                .ForPath(a => a.ToxicityLevel, src => src.MapFrom(a => a.Level))
+                .ForPath(a => a.Theme, src => src.MapFrom(a => a.Theme))
                 .ForPath(a => a.Capacity, src => src.MapFrom(a => a.Capacity));
         }
     }

@@ -17,10 +17,10 @@ namespace BLL.Services
 
         }
 
-        public async Task AddGoodsAsync(BooksDTO books
+        public async Task AddBooksAsync(BooksDTO books
             )
         {
-            var mappedGoods = _mapper.Map<Books>(books);
+            var mappedBooks = _mapper.Map<Books>(books);
 
             await _uof.BooksRepository.AddAsync(mappedBooks);
         }

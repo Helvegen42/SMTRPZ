@@ -16,7 +16,7 @@ namespace BLL.Services
 
         }
 
-        public async Task PlaceGoodsAsync(BooksDTO books, LockerDTO cRoom)
+        public async Task PlaceBooksAsync(BooksDTO books, LockerDTO cRoom)
         {
             var room = await _uof.LockerRepository.GetByIdAsync(cRoom.Id);
 
@@ -26,9 +26,9 @@ namespace BLL.Services
 
             if ((string)books.Theme != (string)cRoom.Theme) throw new Exception("Wrong");
 
-            room.Goodsos.Add(mappedBooks);
+            room.Bookses.Add(mappedBooks);
 
-            await _uof.ContainRoomRepository.UpdateAsync(room);
+            await _uof.LockerRepository.UpdateAsync(room);
         }
     }
 }
