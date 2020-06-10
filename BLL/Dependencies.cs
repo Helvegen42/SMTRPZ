@@ -15,7 +15,7 @@ namespace BLL
         public static IServiceCollection AddDependenciesBll(this IServiceCollection collection)
         {
             collection.AddAutoMapper(Assembly.GetExecutingAssembly());
-            collection.AddScoped<IGoodsService, GoodsService>();
+            collection.AddScoped<IBooksService, BooksService>();
 
             return collection;
         }
