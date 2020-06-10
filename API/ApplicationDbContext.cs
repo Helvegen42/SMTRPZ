@@ -12,8 +12,8 @@ namespace DAL
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
-        public DbSet<Goods> Goodsos { get; set; }
-        public DbSet<ContainRoom> ContainRooms { get; set; }
+        public DbSet<Books> Bookses { get; set; }
+        public DbSet<Locker> Lockers { get; set; }
         public DbSet<Storage> Storages { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

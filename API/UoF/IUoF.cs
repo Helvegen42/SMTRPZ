@@ -9,7 +9,7 @@ namespace DAL.UoF
     public interface IUoF
     {
         IRepository<Storage> StorageRepository { get; }
-        IRepository<Locker> ContainRoomRepository { get; }
-        IRepository<Books> GoodsRepository { get; }
+        IRepository<Locker> LockerRepository { get; }
+        IRepository<Books> BooksRepository { get; }
     }
 }

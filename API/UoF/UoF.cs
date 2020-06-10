@@ -13,8 +13,8 @@ namespace DAL.UoF
         readonly ApplicationDbContext _context;
 
         IRepository<Storage> storageRepository;
-        IRepository<Locker> containRoomRepository;
-        IRepository<Books> goodsRepository;
+        IRepository<Locker> lockerRepository;
+        IRepository<Books> booksRepository;
 
         public IRepository<Storage> StorageRepository =>
             storageRepository ??= new Repository<Storage>(_context);
